@@ -1,10 +1,17 @@
 
 import React from "react";
-import ReactDOM from "react-dom"
+import ReactDOM from "react-dom";
 
-const parent=React.createElement("div",{id:"parent"},React.createElement("div",{id:"child"},[React.createElement("h1",{id:"text-h1"},"This is the h1 tag"),React.createElement("h2",{id:"text-h2"},"This is the h2 tag")]))
 
-// const heading=React.createElement("h1",{id:"h1"},"Hello World  by Namste Dev");
-// console.log(heading)
+//what is react element => object => HTML element(when we render)
+
+
+//jsx => jsx is similar to html element but its not exactly html element. It is a react element.
+// jsx is trasnpiled(converted to readable to js engine) before it reaches to js engine- the transpilation is done by parcel's package babel(a js compiler)
+// the attribute of jsx elements always written in camlecase
+
+const jsxHeading= (<h1 className="head">Hello world</h1>)
 const root=ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent)
+console.log(jsxHeading)
+root.render(jsxHeading)
+
