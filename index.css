@@ -1,6 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
 #h1{
     color: red;
 }
 #root{
-    background-color: yellow;
+}
+
+:root{
+    --light-yellow:lightyellow;
+    --box-shadow:0 2px 4px 0 rgba(0,0,0,.1);
+    --gray-color:gray;
+}
+.navbar{
+    display: flex;
+    padding: 20px 40px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: gray;
+    color: #fff;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 45px;
+    background-color:var(--light-yellow);
+    height: 70px;
+    box-shadow: var(--box-shadow);
+
+
+}
+.nav-links ul{
+display: flex;
+gap: 20px;
+}
+.nav-links ul {
+    list-style: none;
+    text-transform:capitalize;
+    font-size: 1rem;
+}
+.logo img{
+    background: transparent;
+    mix-blend-mode:multiply;
+    width: 5rem;
+
+}
+
+.body{
+  min-height: calc(100vh - 70px);
+  padding-inline: 5rem;
+  padding-bottom: 1rem;
+}
+.filter{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.filter-btn{
+    /* background-color: red; */
+    text-align: center;
+    padding-block: 1rem;
+    cursor: pointer;
+}
+.res-card{
+    width: 12rem;
+    height:15rem;
+    background-color: lightyellow;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    border-radius: .5rem;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    cursor: pointer;
+
+}
+.res-card img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: .5rem;
+    transition: all ease .5s;
+    overflow: hidden;
+
+}
+.res-card:hover.res-card img{
+
+    scale: 1.05;
+}
+.res-card .disc{
+
+    color: gray;
+}
+.dish-name{
+    font-weight: 500;
+}
+.rating-time{
+    display: flex;
+    /* background-color: yellow; */
+    gap: 1rem;
+    align-items: center;
+}
+.rating-time h5:nth-child(1){
+    background-color:#1f943b;
+    border-radius: .2rem;
+    padding: .2rem;
+    color: #fff;
+}
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items:center;
+    justify-content: center;
+}
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items:center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+    
+.shimmer-card{
+    width: 12rem;
+    height:15rem;
+    background-color: rgba(128, 128, 128, 0.13);
+    border-radius: .5rem;
+    padding: .5rem;
+}
+.login{
+    background-color:transparent;
+    padding: .2rem;
+    border: 1px solid gray;
+    border-radius: .2rem;
+    cursor: pointer;
 }
