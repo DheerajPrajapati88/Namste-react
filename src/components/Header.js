@@ -1,8 +1,10 @@
 import logo from '../assets/logo.png';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
+import { Link } from 'react-router-dom';
  const Header = () => {
 
   const [btnNameReact,setBtnNameReact]=useState('Login')
+
     return (
       <div className="header">
         <div className="logo">
@@ -10,9 +12,9 @@ import { useState } from 'react';
         </div>
         <div className="nav-links">
           <ul>
-            <li>home</li>
-            <li>about</li>
-            <li>contact</li>
+            <li><Link to="/">home</Link></li>
+            <li><Link to="/about">about</Link></li>
+            <li><Link to="/contact">contact</Link></li>
             <li>cart</li>
           </ul>
         </div>
