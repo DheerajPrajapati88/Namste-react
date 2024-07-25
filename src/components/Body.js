@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import useOnlineStatus from "../utils/useOnlineStatus";
 const Body = () => {
   const [listOfRestaurant, setRes] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
@@ -13,7 +14,7 @@ const Body = () => {
   const fetchData = async () => {
 
       const data = await fetch(
-        "https://www.swiggy.com/mapi/homepage/getCards?lat=26.709179&lng=83.3241592"
+        "https://www.swiggy.com/mapi/homepage/getCards?lat=26.8467126&lng=80.9460872"
       );
       const json = await data.json();
       setRes(
@@ -28,7 +29,10 @@ const Body = () => {
    
 
   };
-
+  
+  const onlineStatus=useOnlineStatus();
+  if(onlineStatus===false) return (<h1>You are offline</h1>)
+    
   return listOfRestaurant.length === 0 ? (
     <Shimmer />
   ) : (
